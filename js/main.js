@@ -15,8 +15,6 @@
 // to watch for behavior on newly appended items.
 
 $(document).ready(function(){
-    // do stuff
-
     // add dataEntry elements
     var userInput = $("<input id='textInput' type='text'>");
 
@@ -26,13 +24,13 @@ $(document).ready(function(){
       var newItem = $("#textInput").val();
       if (!newItem){
         $("#textInput").focus();
-        $("p.instructions").hide();
+        $(".instructions").text("Enter text to add item");
       } else {
         var newListItem = $("<li>").append(newItem);
         $("#toDoList").append(newListItem);
         $("#textInput").val('');
         $("#textInput").focus();
-        $("p.instructions").show();
+        $(".instructions").text("Click item to remove from list. Sort list by dragging items around.");
       }
     }).text("Click to Add");
 
@@ -53,7 +51,7 @@ $(document).ready(function(){
     $("#dataEntry").append(userInput);
     $("#dataEntry").append(button);
     $("#textInput").focus();
-    $("p.instructions").hide();
+    // $("p.instructions").hide();
 
 
 });

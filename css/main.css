@@ -1,20 +1,34 @@
+h2 {
+  border: 2px ridge black;
+  background: linear-gradient(gray, yellow);
+  padding: 20px;
+}
+
+input {
+  margin: 10px;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 
 .dataEntry {
-
+  border: 1px solid;
+  padding: 5px;
+  margin: 5px;
 }
 
 .toDos {
-  /* border: 1px solid green; */
   background-color: yellow;
   text-align: center;
 }
 
-h2 {
-
-}
-
 #toDoList li {
   border-bottom: 3px solid green;
+  border-left: 5px double red;
+  margin-left: 15px;
+  padding-left: 15px;
   list-style: none;
   text-align: left;
 }
