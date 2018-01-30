@@ -21,7 +21,7 @@ $(document).ready(function(){
     var userInput = $("<input id='textInput' type='text'>");
 
     // submit button
-    var button = $("<button>Click to Add</button>").click(function() {
+    var button = $("<button id='submit'>").click(function() {
       var newItem = $("#textInput").val();
       if (!newItem){
         $("#textInput").focus();
@@ -31,12 +31,16 @@ $(document).ready(function(){
         $("#textInput").val('');
         $("#textInput").focus();
       }
-    });
+    }).text("Click to Add");
+
+    // do sort
+    // $("#toDoList").sortable();
+    // $("#toDoList").disableSelection();
 
     // Event delegation
     $('#toDoList').on('click', 'li', function(event) {
       $(this).remove();
-    });
+    }).sortable();
 
     // add item to DOM
     $("#dataEntry").append(userInput);
