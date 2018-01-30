@@ -34,17 +34,20 @@ $(document).ready(function(){
     }).text("Click to Add");
 
     // do sort
-    // $("#toDoList").sortable();
-    // $("#toDoList").disableSelection();
+    $( function() {
+      $("#toDoList").sortable();
+      $("#toDoList").disableSelection();
+    });
 
     // Event delegation
     $('#toDoList').on('click', 'li', function(event) {
       $(this).remove();
-    }).sortable();
+    });
 
     // add item to DOM
     $("#dataEntry").append(userInput);
     $("#dataEntry").append(button);
+    // $("#dataEntry").append(buttonSort);
     $("#textInput").focus();
 
 });
