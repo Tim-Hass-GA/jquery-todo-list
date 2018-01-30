@@ -2,10 +2,15 @@
 .dataEntry {
 
 }
+
 .toDos {
   /* border: 1px solid green; */
   background-color: yellow;
   text-align: center;
+}
+
+h2 {
+
 }
 
 #toDoList li {
