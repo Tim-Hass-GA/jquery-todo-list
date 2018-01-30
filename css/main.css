@@ -1,0 +1,15 @@
+
+.dataEntry {
+
+}
+.toDos {
+  /* border: 1px solid green; */
+  background-color: yellow;
+  text-align: center;
+}
+
+#toDoList li {
+  border-bottom: 3px solid green;
+  list-style: none;
+  text-align: left;
+}
