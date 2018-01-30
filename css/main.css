@@ -2,6 +2,7 @@ h2 {
   border: 2px ridge black;
   background: linear-gradient(gray, yellow);
   padding: 20px;
+  margin-bottom: 0;
 }
 
 input {
@@ -9,14 +10,13 @@ input {
 }
 
 ul {
-  margin-left: 0;
+  margin: 0;
   padding-left: 0;
 }
 
 .dataEntry {
   border: 1px solid;
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
 }
 
 .toDos {
