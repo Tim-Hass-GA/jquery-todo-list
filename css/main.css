@@ -22,9 +22,11 @@ ul {
 .toDos {
   background-color: yellow;
   text-align: center;
+  padding-bottom: 1em;
+  margin: 1em;
 }
 
-#toDoList li {
+#toDoList li, #doneList li {
   border-bottom: 3px solid green;
   border-left: 5px double red;
   margin-left: 15px;

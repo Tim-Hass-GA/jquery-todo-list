@@ -30,7 +30,7 @@ $(document).ready(function(){
         $("#toDoList").append(newListItem);
         $("#textInput").val('');
         $("#textInput").focus();
-        $(".instructions").text("Click item to remove from list. Sort list by dragging items around.");
+        $(".instructions").text("Click item to move to completed list. Sort todo list by dragging items around.");
       }
     }).text("Click to Add");
 
@@ -41,11 +41,26 @@ $(document).ready(function(){
     });
 
     // Event delegation
+    // move data from one list to another
     $('#toDoList').on('click', 'li', function(event) {
-      $(this).remove();
+      if ($('#doneList li').length == 0){
+        var header = $("<h3>").text("Completed List");
+        $('#doneList').append(header);
+        $(".done_instructions").text("Click item to remove from completed list.");
+      }
+      var doneListItem = $(this);
+      // var doneListItem = $("<li>").append(this);
+      $('#doneList').append(doneListItem);
     });
 
-    // move data from one list to another
+    // remove item from list
+    $('#doneList').on('click', 'li', function(event) {
+      $(this).remove();
+      if ($('#doneList li').length == 0){
+        $('#doneList h3').remove();
+        $('.done_instructions').text("You're a rock star...");
+      }
+    });
 
     // add item to DOM
     $("#dataEntry").append(userInput);
